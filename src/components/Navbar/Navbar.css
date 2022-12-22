@@ -1,4 +1,9 @@
 .navColor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;       
+    justify-content: space-around;    
+
     background: linear-gradient(to right, black, #243F4F, black, #243F4F, black); 
 }
 

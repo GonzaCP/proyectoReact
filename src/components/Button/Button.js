@@ -1,9 +1,8 @@
-const Button = ({ handleClick, label, color, bootstrap}) => {
+const Button = ({ label, backgroundColor, bootstrap}) => {
     return (
-        <button
-            className={`Button ${bootstrap}`}
-            onClick={handleClick}
-            style={{ backgroundColor: color}}
+        <button 
+            className={`${bootstrap}`}             
+            style={{ backgroundColor }}
         >{label}</button>
     )
 }

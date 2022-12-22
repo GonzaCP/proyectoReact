@@ -198,6 +198,21 @@ Las props controlan los cambios de estados de la aplicación.
 Son reutilizables.
 Una prop puede ser una función.
 (Las props se escriben en JSX de la misma forma que se escriben los atributos en html (placeholder, class, id, etc.))
+Las props tienen que ser nombres representativos.
+Las propiedades de css se escriben con camelCase, por ej: margin-top --->css ----  marginTop --->react
+
+Componente contenedor va contener componentes de presentación u otros contenedores.
+Tienen como propósito encapsular a otros componentes y proporcionarles las propiedades que necesitan.
+Son los encargados de realizar las llamadas a las API´s externas.
+
+
+CHILDREN
+
+
+
+
+
+/*    CLASE 5     COMPONENTES II */
 
 
 
