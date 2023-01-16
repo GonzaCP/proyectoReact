@@ -185,6 +185,10 @@ importar en index.ja la línea de código 'import 'bootstrap/dist/css/bootstrap.
 
 CLASE 4    /* COMPONENTES */
 
+
+
+
+
 Utilizar estos caracteres para renderizar los componentes del html:
 <>
 </>
@@ -213,6 +217,116 @@ CHILDREN
 
 
 /*    CLASE 5     COMPONENTES II */
+
+
+
+
+/* ESTADO */
+
+Hooks ---> Son funciones que nos provee React para cubrir nuestras necesidades de estado.
+SIEMPRE devuelven un array con 2 elementos: el 1er elemento corresponde al valor que estoy guardando, y el 2do elemento corresponde a la función que cambia al estado o actualiza (renderiza). Por ej: const [coun, setCount] = useState[0] ---> Se utiliza la desestructuración de array para asignarle nombres a los elementos.
+Todos los hooks comienza con el prefijo "use" ---> Ej 'estado': { useState }
+
+El hook "useState" (que también es una función) se utiliza para cubrir la necesidad de estado de React.
+
+
+*Los parámetros no tienen palabras reservadas. Son "declaraciones de variables"*
+
+/* CICLOS DE VIDA */
+
+Se refiere a los distintos estados en los que se va transformando un componente. Por ejemplo hago click en un objeto, me lleva a una página aparte donde solo tengo ese producto y un contador para los cambios de estado, luego vuelvo a la página principal, destruyendo ese último estado.
+Montaje - Actualización - Desmontaje
+
+
+/* useEffect */
+
+La función useEffect, es un hook (función) que se utiliza para que el código dentro de ésta función se ejecute después del 'return'.
+useEffect(() => {
+    console.log("El código se va ejecutar despues del 'return'")
+})
+
+Recibe dos argumentos.. el 1ro es una función (bloque de código) y el 2do argumento es una array de dependencia vacío.
+Y para que no se ejecute el código dos veces, se le coloca un array de dependencias vacío, pasado cómo argumento. El array va determinar cuando debo ejectur la función. Si el array esta vacío significa que se tiene que ejecutar solamente al montar el componente (una sola vez).
+Esto sirve para que se ejecute sólo una vez. Por ejemplo para un llamado a una api donde recibo muchas imagenes y texto, lo hago para que lo llame sólo una vez y no cada vez que se actualize la pag.
+
+useEffect(() => {
+    console.log("El código se va ejecutar despues del 'return'")
+}, [])
+
+
+
+/* CLASE 6 PROMISES, ASINCRONÍA Y MAP */
+
+
+
+
+Funciones callstack --> funciones que se ejecutan de a una. Se ejecuta y retorna un resultado.
+Funciones asíncronas --> funciones que se ejecutan en paralelo a la función callstack.
+
+Una Promise es un objeto que permite representar y seguir el ciclo de vida de una función.
+Sus estados son: pendiente --> fullfilled || rejected
+
+setTimeout() => {} => se utiliza para setear un retardo.
+
+const irme = () => {
+    return "me fui"
+}
+
+const haciendoAlgo = () => {
+    return new Promise ((resolve, reject) => {
+        secTimeout(() => {
+            //resolve("algo va pasar")
+            reject("No va pasar nada")
+        }, 3000)
+    })
+}
+
+haciendoAlgo().then(result => {
+    console.log(result)
+}, error => {
+    throw new Error("Se generó un error")
+    console.log(error)
+}).catch(error => {
+    console.log(error)
+})
+
+/*.catch(error => {
+    console.log(error)*/
+}).finally(() => {
+    console.log(irme())
+})
+
+
+
+/* la prop "key" va SIEMPRE SIEMPRE dentro del .map y sirve para identificar sus id... solo se utiliza para los listados, div, etc.*/
+
+
+
+
+/* CLASE 7 API */
+
+Conexiones " Web Socket" ---> como la que tiene Binance cuando muestran los valores de las monedas y sus cambios constantes.
+
+(código de estado)
+Status code = 200 ---> Significa que todo funcionó bien.
+Status code = 404 ---> Error
+
+URL params/segment
+
+https://myapp.coder/student/1234/courses ---> a través de las "/" busco la carpeta que ya sé que existe y me lleva directo.
+
+Fetch
+
+cors ---> La api no nos permite obtener datos desde otro origen.
+
+
+/* CLASE 8 ROUTING */
+
+ROUTING
+ 
+
+
+
 
 
 
