@@ -9,19 +9,6 @@ const ItemListContainer = () => {
     const [loading, setLoading] = useState(true)
 
     const { categoryId } = useParams()
-/* 
-    useEffect(()=>{
-
-        getProducts().then(productsFromApi =>{
-            setProducts(productsFromApi)
-        }).catch(error => {
-            console.log(error)
-        }).finally(()=> {
-            setLoading(false)
-        })
-    }, [])
- */
-
 
     useEffect(() => {
 

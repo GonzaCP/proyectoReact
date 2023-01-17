@@ -1,3 +1,7 @@
+.colorNav {
+    color: White;
+}
+
 .navColor {
     display: flex;
     flex-direction: row;
