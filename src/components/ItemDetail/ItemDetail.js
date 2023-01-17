@@ -1,13 +1,13 @@
 import ItemCount from "../ItemCount/ItemCount"
 
-const ItemDetail = ({ id, name, price, category, description }) => {
+const ItemDetail = ({ name, price, description, place, time }) => {
     return (
-        <div>
-            <h3>ID: {id}</h3>
-            <h4>Nombre de la banda{name}</h4>
-            <p>Precio: $ {price}</p>
-            <p>Descripcion: {description}</p>
-            <p>Categoria:{category}</p>
+        <div>            
+            <h4>{name}</h4>
+            <p>{description}</p> 
+            <p>{place}</p>
+            <p>{time}</p>  
+            <p>${price} c/entrada</p>       
             <ItemCount />
         </div>
     )

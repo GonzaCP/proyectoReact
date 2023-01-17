@@ -1,7 +1,7 @@
 const products = [
-    { id: 1, name: "Red Hot Chili Peppers", price: 500, category: "redhot", description: "El mejor funky-rock de la historia" },
-    { id: 2, name: "Greta Van Fleet", price: 300, category: "greta", description: "Los nuevos Led Zeppelin" },
-    { id: 3, name: "Pink Floyd", price: 700, category: "pink", description: "los históricos" }
+    { id: 1, name: "Red Hot Chili Peppers", price: 500, category: "redhot", description: "El mejor funky-rock de la historia", place: "Estadio Ruca Che", time: "21 hs" },
+    { id: 2, name: "Greta Van Fleet", price: 300, category: "greta", description: "Los nuevos Led Zeppelin", place: "Casino Magic", time: "21.30 hs"  },
+    { id: 3, name: "Pink Floyd", price: 700, category: "pink", description: "los históricos", place: "Cemento", time: "22 hs" }
 ]
 
 
@@ -24,7 +24,7 @@ export const getProductsByCategory = (categoryId) => {
 export const getProductById = (id) => {
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve(products.find(prod => prod.id === id))
+            resolve(products.find(prod => prod.id == id))
         }, 500)
     })
 }
