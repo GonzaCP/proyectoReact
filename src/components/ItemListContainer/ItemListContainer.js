@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react"
-// import { useParams } from "react-router-dom"
-import { getProducts } from "../asyncMock"
+import { getProducts, getProductsByCategory } from "../asyncMock"
 import ItemList from "../ItemList/ItemList"
+import { useParams } from "react-router-dom"
 
-
-const ItemListContainer = () => {
+const ItemListContainer = () => { 
        
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
+
+    const { categoryId } = useParams()
+/* 
     useEffect(()=>{
+
         getProducts().then(productsFromApi =>{
             setProducts(productsFromApi)
         }).catch(error => {
@@ -17,26 +20,26 @@ const ItemListContainer = () => {
             setLoading(false)
         })
     }, [])
+ */
+
+
+    useEffect(() => {
+
+        setLoading()
+
+        const asyncFunction = categoryId ? getProductsByCategory : getProducts
+        asyncFunction(categoryId).then(response => {
+            setProducts(response)
+        }).catch(error => {
+            console.log(error)
+        }).finally(() => {
+            setLoading(false)
+        })
+    }, [categoryId])
+  
     if(loading) {
         return <h1>Cargando..</h1>
     }
-
-
-    // const { categoryId } = useParams()
-
-
-    // useEffect(() => {
-    //     const asyncFunction = categoryId ? getProductsByCategory : getProducts
-    //     asyncFunction(categoryId)
-    //         .then(products => {
-    //             setProducts(products)
-    //         })
-    //         .catch(error => {
-    //             console.log(error)
-    //         })
-    // }, [categoryId])
-  
-
 
     return (
         <div>                   

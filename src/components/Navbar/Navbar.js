@@ -22,9 +22,9 @@ const Navbar = () => {
                 <CartWidget />  
                 </div>
                 <div>
-                    <Link to="/category/redhot">RedHot</Link>
-                    <Link to="/category/greta">Greta Van Fleet</Link>
-                    <Link to="/category/pink">Pink Floyd</Link>
+                    <Link to="/category/musica">RedHot</Link>
+                    <Link to="/category/musica">Greta Van Fleet</Link>
+                    <Link to="/category/peliculas">Pink Floyd</Link>
                 </div>
             </nav> 
         </header>

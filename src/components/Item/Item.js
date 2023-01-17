@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 const Item = ({ id, name, price, place, time }) => {
     return (
         <div>
-            <h3>{name}</h3>
+            <h3>{name}</h3>          
             <p>{place}</p>
             <p>{time}</p>
             <p>${price} c/u</p>
