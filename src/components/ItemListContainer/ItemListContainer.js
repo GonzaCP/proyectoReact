@@ -20,6 +20,8 @@ const ItemListContainer = () => {
     if(loading) {
         return <h1>Cargando..</h1>
     }
+
+
     // const { categoryId } = useParams()
 
 
@@ -38,9 +40,8 @@ const ItemListContainer = () => {
 
     return (
         <div>                   
-           <h1>PRODUCTOS ItemListContainer</h1>
-           <ItemList products={products}/>
-          
+           <h1>ENTRADAS DISPONIBLES PARA LA VENTA</h1>
+           <ItemList products={products}/>          
         </div>
     )
 }

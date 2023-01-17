@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom"
 
 
-const Item = ({ id, name, price }) => {
+const Item = ({ id, name, price, place, time }) => {
     return (
         <div>
-            <h4>{name}</h4>
-            <h3>{price}</h3>
-            <Link to={`/item/${id}`}>Mostrar más</Link>
+            <h3>{name}</h3>
+            <p>{place}</p>
+            <p>{time}</p>
+            <p>${price} c/u</p>
+            <Link to={`/item/${id}`}>Comprar entradas!</Link>
         </div>
     )
 }
